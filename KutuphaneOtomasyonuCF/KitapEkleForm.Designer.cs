@@ -31,7 +31,6 @@
             this.lbKitap = new System.Windows.Forms.ListBox();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
-            this.txtYazar = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.nudStok = new System.Windows.Forms.NumericUpDown();
             this.btnSil = new System.Windows.Forms.Button();
@@ -41,15 +40,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudStok)).BeginInit();
             this.SuspendLayout();
             // 
             // lbKitap
             // 
             this.lbKitap.FormattingEnabled = true;
-            this.lbKitap.Location = new System.Drawing.Point(12, 146);
+            this.lbKitap.Location = new System.Drawing.Point(12, 120);
             this.lbKitap.Name = "lbKitap";
-            this.lbKitap.Size = new System.Drawing.Size(283, 108);
+            this.lbKitap.Size = new System.Drawing.Size(283, 134);
             this.lbKitap.TabIndex = 0;
             // 
             // txtAra
@@ -66,13 +66,6 @@
             this.txtAd.Size = new System.Drawing.Size(237, 20);
             this.txtAd.TabIndex = 2;
             // 
-            // txtYazar
-            // 
-            this.txtYazar.Location = new System.Drawing.Point(58, 38);
-            this.txtYazar.Name = "txtYazar";
-            this.txtYazar.Size = new System.Drawing.Size(237, 20);
-            this.txtYazar.TabIndex = 3;
-            // 
             // txtISBN
             // 
             this.txtISBN.Location = new System.Drawing.Point(58, 64);
@@ -84,32 +77,32 @@
             // 
             this.nudStok.Location = new System.Drawing.Point(58, 91);
             this.nudStok.Name = "nudStok";
-            this.nudStok.Size = new System.Drawing.Size(237, 20);
+            this.nudStok.Size = new System.Drawing.Size(34, 20);
             this.nudStok.TabIndex = 5;
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(220, 116);
+            this.btnSil.Location = new System.Drawing.Point(236, 91);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.Size = new System.Drawing.Size(58, 23);
             this.btnSil.TabIndex = 13;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(139, 116);
+            this.btnGuncelle.Location = new System.Drawing.Point(167, 91);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle.Size = new System.Drawing.Size(58, 23);
             this.btnGuncelle.TabIndex = 12;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(58, 117);
+            this.btnEkle.Location = new System.Drawing.Point(98, 91);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.Size = new System.Drawing.Size(58, 23);
             this.btnEkle.TabIndex = 11;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
@@ -150,11 +143,20 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Ad";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(58, 38);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(238, 21);
+            this.comboBox1.TabIndex = 19;
+            // 
             // KitapEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 287);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -164,7 +166,6 @@
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.nudStok);
             this.Controls.Add(this.txtISBN);
-            this.Controls.Add(this.txtYazar);
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.lbKitap);
@@ -184,7 +185,6 @@
         private System.Windows.Forms.ListBox lbKitap;
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.TextBox txtAd;
-        private System.Windows.Forms.TextBox txtYazar;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.NumericUpDown nudStok;
         private System.Windows.Forms.Button btnSil;
@@ -194,5 +194,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

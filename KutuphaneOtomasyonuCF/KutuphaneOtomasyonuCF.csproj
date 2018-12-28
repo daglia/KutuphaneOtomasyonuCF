@@ -53,6 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
+    <Compile Include="Entities\Kitap.cs" />
+    <Compile Include="Entities\Odunc.cs" />
+    <Compile Include="Entities\OduncDetay.cs" />
+    <Compile Include="Entities\Uye.cs" />
+    <Compile Include="Entities\Yazar.cs" />
+    <Compile Include="Migrations\201812281158278_a1.cs" />
+    <Compile Include="Migrations\201812281158278_a1.Designer.cs">
+      <DependentUpon>201812281158278_a1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UyeEkleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="KitapEkleForm.resx">
       <DependentUpon>KitapEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812281158278_a1.resx">
+      <DependentUpon>201812281158278_a1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OduncForm.resx">
       <DependentUpon>OduncForm.cs</DependentUpon>
@@ -116,7 +130,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
