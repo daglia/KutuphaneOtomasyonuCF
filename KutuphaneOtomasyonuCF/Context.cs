@@ -12,7 +12,7 @@ namespace KutuphaneOtomasyonuCF
     {
         public Context() : base("name=MyCon")
         {
-
+            
         }
 
         public virtual DbSet<Uye> Uyeler { get; set; }

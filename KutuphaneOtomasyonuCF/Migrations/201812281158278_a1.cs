@@ -18,13 +18,13 @@ namespace KutuphaneOtomasyonuCF.Migrations
                         Odunc_OduncId = c.Int(),
                     })
                 .PrimaryKey(t => t.KitapId)
-                .ForeignKey("dbo.Yazars", t => t.YazarId, cascadeDelete: true)
+                .ForeignKey("dbo.Yazarlar", t => t.YazarId, cascadeDelete: true)
                 .ForeignKey("dbo.Oduncler", t => t.Odunc_OduncId)
                 .Index(t => t.YazarId)
                 .Index(t => t.Odunc_OduncId);
             
             CreateTable(
-                "dbo.Yazars",
+                "dbo.Yazarlar",
                 c => new
                     {
                         YazarId = c.Int(nullable: false, identity: true),
@@ -76,7 +76,7 @@ namespace KutuphaneOtomasyonuCF.Migrations
             DropForeignKey("dbo.OduncDetaylar", "OduncId", "dbo.Oduncler");
             DropForeignKey("dbo.Oduncler", "UyeId", "dbo.Uyeler");
             DropForeignKey("dbo.Kitaplar", "Odunc_OduncId", "dbo.Oduncler");
-            DropForeignKey("dbo.Kitaplar", "YazarId", "dbo.Yazars");
+            DropForeignKey("dbo.Kitaplar", "YazarId", "dbo.Yazarlar");
             DropIndex("dbo.Oduncler", new[] { "UyeId" });
             DropIndex("dbo.OduncDetaylar", new[] { "OduncId" });
             DropIndex("dbo.Kitaplar", new[] { "Odunc_OduncId" });
@@ -84,7 +84,7 @@ namespace KutuphaneOtomasyonuCF.Migrations
             DropTable("dbo.Uyeler");
             DropTable("dbo.Oduncler");
             DropTable("dbo.OduncDetaylar");
-            DropTable("dbo.Yazars");
+            DropTable("dbo.Yazarlar");
             DropTable("dbo.Kitaplar");
         }
     }

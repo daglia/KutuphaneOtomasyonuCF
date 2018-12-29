@@ -38,6 +38,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FakeData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeData.1.0.0\lib\FakeData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -53,17 +59,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\KitapBusiness.cs" />
+    <Compile Include="BLL\OduncBusiness.cs" />
+    <Compile Include="BLL\UyeBusiness.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Entities\Kitap.cs" />
     <Compile Include="Entities\Odunc.cs" />
     <Compile Include="Entities\OduncDetay.cs" />
     <Compile Include="Entities\Uye.cs" />
     <Compile Include="Entities\Yazar.cs" />
+    <Compile Include="Helpers\EntityHelper.cs" />
     <Compile Include="Migrations\201812281158278_a1.cs" />
     <Compile Include="Migrations\201812281158278_a1.Designer.cs">
       <DependentUpon>201812281158278_a1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MockData\MockData.cs" />
     <Compile Include="UyeEkleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +101,9 @@
     <Compile Include="AnaSayfa.Designer.cs">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\KitapViewModel.cs" />
+    <Compile Include="ViewModels\UyeViewModel.cs" />
+    <Compile Include="ViewModels\YazarViewModel.cs" />
     <EmbeddedResource Include="KitapEkleForm.resx">
       <DependentUpon>KitapEkleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,9 +143,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\pexels-photo-12064.jpeg" />
   </ItemGroup>

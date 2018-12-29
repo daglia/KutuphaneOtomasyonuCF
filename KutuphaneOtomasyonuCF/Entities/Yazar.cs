@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KutuphaneOtomasyonuCF.Entities
 {
+    [Table("Yazarlar")]
     public class Yazar
     {
         [Key]

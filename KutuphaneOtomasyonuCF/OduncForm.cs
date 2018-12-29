@@ -16,5 +16,15 @@ namespace KutuphaneOtomasyonuCF
         {
             InitializeComponent();
         }
+
+        private void OduncForm_Load(object sender, EventArgs e)
+        {
+            VerileriGetir();
+        }
+
+        private void VerileriGetir()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
