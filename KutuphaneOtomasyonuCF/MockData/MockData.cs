@@ -1,4 +1,6 @@
-﻿using KutuphaneOtomasyonuCF.Entities;
+﻿using KutuphaneOtomasyonuCF.BLL;
+using KutuphaneOtomasyonuCF.Entities;
+using KutuphaneOtomasyonuCF.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +19,17 @@ namespace KutuphaneOtomasyonuCF.MockData
 
             for (int i = 0; i < 20; i++)
             {
-                Context.Uyeler.Add(new Uye()
+                var uyeBusiness = new UyeBusiness();
+                var uyeModel = new UyeViewModel()
                 {
                     UyeAd = FakeData.NameData.GetFirstName(),
                     UyeSoyad = FakeData.NameData.GetSurname(),
                     UyeTCKN = FakeData.TextData.GetNumeric(11),
                     UyeTelefon = "5" + FakeData.TextData.GetNumeric(9),
                     UyeMail = (FakeData.NameData.GetFirstName().Substring(0, 1) + "." + FakeData.NameData.GetSurname() + "@kutupmail.com").ToLower()
-                });
+                };
+
+                uyeBusiness.UyeEkle(uyeModel);
             }
             for (int i = 0; i < 20; i++)
             {

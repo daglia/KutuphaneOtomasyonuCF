@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnMock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbUyeler
@@ -53,15 +54,16 @@
             this.lbUyeler.FormattingEnabled = true;
             this.lbUyeler.ItemHeight = 16;
             this.lbUyeler.Location = new System.Drawing.Point(16, 64);
-            this.lbUyeler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbUyeler.Margin = new System.Windows.Forms.Padding(4);
             this.lbUyeler.Name = "lbUyeler";
             this.lbUyeler.Size = new System.Drawing.Size(231, 228);
             this.lbUyeler.TabIndex = 0;
+            this.lbUyeler.SelectedIndexChanged += new System.EventHandler(this.lbUyeler_SelectedIndexChanged);
             // 
             // txtAra
             // 
             this.txtAra.Location = new System.Drawing.Point(17, 32);
-            this.txtAra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(229, 22);
             this.txtAra.TabIndex = 1;
@@ -71,7 +73,7 @@
             // 
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(335, 64);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(315, 22);
             this.txtId.TabIndex = 2;
@@ -79,7 +81,7 @@
             // txtAd
             // 
             this.txtAd.Location = new System.Drawing.Point(335, 96);
-            this.txtAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(315, 22);
             this.txtAd.TabIndex = 3;
@@ -87,7 +89,7 @@
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(335, 128);
-            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(315, 22);
             this.txtSoyad.TabIndex = 4;
@@ -95,7 +97,7 @@
             // txtTCKN
             // 
             this.txtTCKN.Location = new System.Drawing.Point(335, 160);
-            this.txtTCKN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTCKN.Margin = new System.Windows.Forms.Padding(4);
             this.txtTCKN.Name = "txtTCKN";
             this.txtTCKN.Size = new System.Drawing.Size(315, 22);
             this.txtTCKN.TabIndex = 5;
@@ -103,7 +105,7 @@
             // txtTelefon
             // 
             this.txtTelefon.Location = new System.Drawing.Point(335, 192);
-            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(315, 22);
             this.txtTelefon.TabIndex = 6;
@@ -111,7 +113,7 @@
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(335, 224);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(315, 22);
             this.txtMail.TabIndex = 7;
@@ -119,7 +121,7 @@
             // btnEkle
             // 
             this.btnEkle.Location = new System.Drawing.Point(335, 257);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(100, 28);
             this.btnEkle.TabIndex = 8;
@@ -130,22 +132,24 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Location = new System.Drawing.Point(443, 256);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(100, 28);
             this.btnGuncelle.TabIndex = 9;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
             this.btnSil.Location = new System.Drawing.Point(551, 256);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(100, 28);
             this.btnSil.TabIndex = 10;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label1
             // 
@@ -217,11 +221,23 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Arama";
             // 
+            // btnMock
+            // 
+            this.btnMock.Location = new System.Drawing.Point(263, 257);
+            this.btnMock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMock.Name = "btnMock";
+            this.btnMock.Size = new System.Drawing.Size(60, 28);
+            this.btnMock.TabIndex = 18;
+            this.btnMock.Text = "Mock";
+            this.btnMock.UseVisualStyleBackColor = true;
+            this.btnMock.Click += new System.EventHandler(this.btnMock_Click);
+            // 
             // UyeEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 305);
+            this.Controls.Add(this.btnMock);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -241,7 +257,7 @@
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.lbUyeler);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UyeEkleForm";
@@ -272,6 +288,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnMock;
     }
 }
 
