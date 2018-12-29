@@ -16,7 +16,7 @@ namespace KutuphaneOtomasyonuCF.Entities
         public int YazarId { get; set; }
 
         [StringLength(20, ErrorMessage = "Yazar adı 20 karakterden fazla olamaz")]
-        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Ad sadece harflerden oluşmalıdır.")]
+        //[RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Ad sadece harflerden oluşmalıdır.")]
         [Required]
         public string YazarAd { get; set; }
 

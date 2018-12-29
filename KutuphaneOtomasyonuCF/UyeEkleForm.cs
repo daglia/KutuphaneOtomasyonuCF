@@ -128,6 +128,7 @@ namespace KutuphaneOtomasyonuCF
         private void btnMock_Click(object sender, EventArgs e)
         {
             Context Context = new MockData.MockData().Context;
+            VerileriGetir();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

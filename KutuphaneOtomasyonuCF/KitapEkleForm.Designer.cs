@@ -41,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbYazar = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtYazarId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudStok)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             this.lbKitap.Name = "lbKitap";
             this.lbKitap.Size = new System.Drawing.Size(376, 164);
             this.lbKitap.TabIndex = 0;
+            this.lbKitap.SelectedIndexChanged += new System.EventHandler(this.lbKitap_SelectedIndexChanged);
             // 
             // txtAra
             // 
@@ -77,7 +80,7 @@
             this.txtKitapId.Location = new System.Drawing.Point(77, 79);
             this.txtKitapId.Margin = new System.Windows.Forms.Padding(4);
             this.txtKitapId.Name = "txtKitapId";
-            this.txtKitapId.Size = new System.Drawing.Size(315, 22);
+            this.txtKitapId.Size = new System.Drawing.Size(109, 22);
             this.txtKitapId.TabIndex = 4;
             // 
             // nudStok
@@ -97,6 +100,7 @@
             this.btnSil.TabIndex = 13;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -107,6 +111,7 @@
             this.btnGuncelle.TabIndex = 12;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
@@ -117,6 +122,7 @@
             this.btnEkle.TabIndex = 11;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label4
             // 
@@ -166,12 +172,34 @@
             this.cmbYazar.Name = "cmbYazar";
             this.cmbYazar.Size = new System.Drawing.Size(316, 24);
             this.cmbYazar.TabIndex = 19;
+            this.cmbYazar.SelectedIndexChanged += new System.EventHandler(this.cmbYazar_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(219, 82);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 17);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Yazar ID";
+            // 
+            // txtYazarId
+            // 
+            this.txtYazarId.Enabled = false;
+            this.txtYazarId.Location = new System.Drawing.Point(284, 82);
+            this.txtYazarId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtYazarId.Name = "txtYazarId";
+            this.txtYazarId.Size = new System.Drawing.Size(109, 22);
+            this.txtYazarId.TabIndex = 20;
             // 
             // KitapEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 353);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtYazarId);
             this.Controls.Add(this.cmbYazar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -213,5 +241,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbYazar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtYazarId;
     }
 }
