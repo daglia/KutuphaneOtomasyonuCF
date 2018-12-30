@@ -35,7 +35,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbUye = new System.Windows.Forms.ComboBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@
             // 
             this.clbKitaplar.FormattingEnabled = true;
             this.clbKitaplar.Location = new System.Drawing.Point(16, 63);
-            this.clbKitaplar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clbKitaplar.Margin = new System.Windows.Forms.Padding(4);
             this.clbKitaplar.Name = "clbKitaplar";
             this.clbKitaplar.Size = new System.Drawing.Size(275, 327);
             this.clbKitaplar.TabIndex = 0;
@@ -57,10 +57,11 @@
             // txtAra
             // 
             this.txtAra.Location = new System.Drawing.Point(16, 31);
-            this.txtAra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(275, 22);
             this.txtAra.TabIndex = 2;
+            this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAra_KeyUp);
             // 
             // label7
             // 
@@ -77,7 +78,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(395, 97);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(265, 24);
             this.comboBox1.TabIndex = 20;
@@ -86,7 +87,7 @@
             // 
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(395, 130);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 21;
@@ -111,21 +112,20 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Üye";
             // 
-            // comboBox2
+            // cmbUye
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(395, 63);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(265, 25);
-            this.comboBox2.TabIndex = 24;
+            this.cmbUye.FormattingEnabled = true;
+            this.cmbUye.Location = new System.Drawing.Point(395, 63);
+            this.cmbUye.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbUye.Name = "cmbUye";
+            this.cmbUye.Size = new System.Drawing.Size(265, 24);
+            this.cmbUye.TabIndex = 24;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Location = new System.Drawing.Point(395, 162);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker2.TabIndex = 25;
@@ -153,7 +153,7 @@
             // btnOdunc
             // 
             this.btnOdunc.Location = new System.Drawing.Point(395, 196);
-            this.btnOdunc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOdunc.Margin = new System.Windows.Forms.Padding(4);
             this.btnOdunc.Name = "btnOdunc";
             this.btnOdunc.Size = new System.Drawing.Size(124, 28);
             this.btnOdunc.TabIndex = 28;
@@ -163,7 +163,7 @@
             // btnIade
             // 
             this.btnIade.Location = new System.Drawing.Point(537, 194);
-            this.btnIade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIade.Margin = new System.Windows.Forms.Padding(4);
             this.btnIade.Name = "btnIade";
             this.btnIade.Size = new System.Drawing.Size(124, 28);
             this.btnIade.TabIndex = 29;
@@ -174,7 +174,7 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(312, 266);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(348, 123);
             this.checkedListBox1.TabIndex = 30;
@@ -201,7 +201,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbUye);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
@@ -210,7 +210,7 @@
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.clbKitaplar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OduncForm";
@@ -230,7 +230,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbUye;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
