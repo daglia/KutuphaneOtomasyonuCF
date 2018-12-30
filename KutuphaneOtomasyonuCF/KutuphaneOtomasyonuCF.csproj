@@ -62,6 +62,7 @@
     <Compile Include="BLL\KitapBusiness.cs" />
     <Compile Include="BLL\OduncBusiness.cs" />
     <Compile Include="BLL\UyeBusiness.cs" />
+    <Compile Include="BLL\YazarBusiness.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Entities\Kitap.cs" />
     <Compile Include="Entities\Odunc.cs" />
@@ -104,6 +105,12 @@
     <Compile Include="ViewModels\KitapViewModel.cs" />
     <Compile Include="ViewModels\UyeViewModel.cs" />
     <Compile Include="ViewModels\YazarViewModel.cs" />
+    <Compile Include="YazarEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YazarEkleForm.Designer.cs">
+      <DependentUpon>YazarEkleForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="KitapEkleForm.resx">
       <DependentUpon>KitapEkleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YazarEkleForm.resx">
+      <DependentUpon>YazarEkleForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

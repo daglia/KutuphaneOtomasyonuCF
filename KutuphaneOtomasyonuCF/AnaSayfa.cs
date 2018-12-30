@@ -21,6 +21,7 @@ namespace KutuphaneOtomasyonuCF
         private OduncForm oduncForm;
         private UyeEkleForm uyeForm;
         private KitapEkleForm kitapForm;
+        private YazarEkleForm yazarForm;
 
         private void ödünçİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -69,6 +70,19 @@ namespace KutuphaneOtomasyonuCF
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void yazarİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (yazarForm == null || yazarForm.IsDisposed)
+            {
+                yazarForm = new YazarEkleForm
+                {
+                    Text = "Yazar İşlemleri",
+                    MdiParent = this
+                };
+                yazarForm.Show();
+            }
         }
     }
 }

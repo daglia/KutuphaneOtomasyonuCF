@@ -25,19 +25,22 @@ namespace KutuphaneOtomasyonuCF.MockData
                     UyeAd = FakeData.NameData.GetFirstName(),
                     UyeSoyad = FakeData.NameData.GetSurname(),
                     UyeTCKN = FakeData.TextData.GetNumeric(11),
-                    UyeTelefon = "5" + FakeData.TextData.GetNumeric(9),
-                    UyeMail = (FakeData.NameData.GetFirstName().Substring(0, 1) + "." + FakeData.NameData.GetSurname() + "@kutupmail.com").ToLower()
+                    UyeTelefon = "5" + FakeData.TextData.GetNumeric(9)
                 };
+                uyeModel.UyeMail = (uyeModel.UyeAd.Substring(0, 1) + "." + uyeModel.UyeSoyad + "@kutupmail.com").ToLower();
 
                 uyeBusiness.UyeEkle(uyeModel);
             }
             for (int i = 0; i < 20; i++)
             {
-                Context.Yazarlar.Add(new Yazar()
+                var yazarBusiness = new YazarBusiness();
+                var yazarModel = new YazarViewModel()
                 {
                     YazarAd = FakeData.NameData.GetFirstName(),
-                    YazarSoyad = FakeData.NameData.GetSurname()
-                });
+                    YazarSoyad = FakeData.NameData.GetSurname(),
+                };
+
+                yazarBusiness.YazarEkle(yazarModel);
             }
             for (int i = 0; i < 20; i++)
             {

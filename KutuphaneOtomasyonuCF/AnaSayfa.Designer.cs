@@ -34,6 +34,7 @@
             this.üyeİşlemleriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kitapİşlemleriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yazarİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             this.işlemlerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ödünçİşlemleriToolStripMenuItem1,
             this.üyeİşlemleriToolStripMenuItem1,
-            this.kitapİşlemleriToolStripMenuItem1});
+            this.kitapİşlemleriToolStripMenuItem1,
+            this.yazarİşlemleriToolStripMenuItem});
             this.işlemlerToolStripMenuItem.Name = "işlemlerToolStripMenuItem";
             this.işlemlerToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.işlemlerToolStripMenuItem.Text = "İşlemler";
@@ -63,21 +65,21 @@
             // ödünçİşlemleriToolStripMenuItem1
             // 
             this.ödünçİşlemleriToolStripMenuItem1.Name = "ödünçİşlemleriToolStripMenuItem1";
-            this.ödünçİşlemleriToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
+            this.ödünçİşlemleriToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.ödünçİşlemleriToolStripMenuItem1.Text = "Ödünç İşlemleri";
             this.ödünçİşlemleriToolStripMenuItem1.Click += new System.EventHandler(this.ödünçİşlemleriToolStripMenuItem1_Click);
             // 
             // üyeİşlemleriToolStripMenuItem1
             // 
             this.üyeİşlemleriToolStripMenuItem1.Name = "üyeİşlemleriToolStripMenuItem1";
-            this.üyeİşlemleriToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
+            this.üyeİşlemleriToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.üyeİşlemleriToolStripMenuItem1.Text = "Üye İşlemleri";
             this.üyeİşlemleriToolStripMenuItem1.Click += new System.EventHandler(this.üyeİşlemleriToolStripMenuItem1_Click);
             // 
             // kitapİşlemleriToolStripMenuItem1
             // 
             this.kitapİşlemleriToolStripMenuItem1.Name = "kitapİşlemleriToolStripMenuItem1";
-            this.kitapİşlemleriToolStripMenuItem1.Size = new System.Drawing.Size(187, 26);
+            this.kitapİşlemleriToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.kitapİşlemleriToolStripMenuItem1.Text = "Kitap İşlemleri";
             this.kitapİşlemleriToolStripMenuItem1.Click += new System.EventHandler(this.kitapİşlemleriToolStripMenuItem1_Click);
             // 
@@ -87,6 +89,13 @@
             this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             this.çıkışToolStripMenuItem.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
+            // 
+            // yazarİşlemleriToolStripMenuItem
+            // 
+            this.yazarİşlemleriToolStripMenuItem.Name = "yazarİşlemleriToolStripMenuItem";
+            this.yazarİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.yazarİşlemleriToolStripMenuItem.Text = "Yazar İşlemleri";
+            this.yazarİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.yazarİşlemleriToolStripMenuItem_Click);
             // 
             // AnaSayfa
             // 
@@ -99,7 +108,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "AnaSayfa";
             this.Text = "Kütüphane Otomasyonu";
@@ -118,5 +127,6 @@
         private System.Windows.Forms.ToolStripMenuItem üyeİşlemleriToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem kitapİşlemleriToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yazarİşlemleriToolStripMenuItem;
     }
 }
