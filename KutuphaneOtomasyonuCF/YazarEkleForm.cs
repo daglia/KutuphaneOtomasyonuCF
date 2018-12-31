@@ -1,4 +1,5 @@
 ﻿using KutuphaneOtomasyonuCF.BLL;
+using KutuphaneOtomasyonuCF.Entities;
 using KutuphaneOtomasyonuCF.Helpers;
 using KutuphaneOtomasyonuCF.ViewModels;
 using System;
@@ -138,6 +139,18 @@ namespace KutuphaneOtomasyonuCF
             txtAd.Text = yazarModel.YazarAd;
             txtSoyad.Text = yazarModel.YazarSoyad;
             txtId.Text = yazarModel.YazarId.ToString();
+        }
+
+        private void lbYazarlar_DoubleClick(object sender, EventArgs e)
+        {
+            var yazarModel = lbYazarlar.SelectedItem as YazarViewModel;
+            if (yazarModel.Kitaplar == null) return;
+            string kitaplar = "";
+            foreach (Kitap kitap in yazarModel.Kitaplar)
+            {
+                kitaplar += kitap.Ad + "\n";
+            }
+            MessageBox.Show("Yazarın kitapları:\n" + kitaplar);
         }
     }
 }

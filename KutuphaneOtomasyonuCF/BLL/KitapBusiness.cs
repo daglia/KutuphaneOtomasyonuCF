@@ -10,9 +10,8 @@ namespace KutuphaneOtomasyonuCF.BLL
 {
     public class KitapBusiness
     {
-        public void KitapEkle(KitapViewModel kitap)
+        public void KitapEkle(KitapViewModel kitap, Context db)
         {
-            Context db = new Context();
             using (var tran = db.Database.BeginTransaction())
             {
                 try
@@ -21,7 +20,8 @@ namespace KutuphaneOtomasyonuCF.BLL
                     {
                         Ad = kitap.Ad,
                         Yazar = kitap.Yazar,
-                        Stok = (short)kitap.Stok
+                        Stok = (short)kitap.Stok,
+                        YazarId = kitap.Yazar.YazarId
                     };
                     db.Kitaplar.Add(yeniKitap);
                     db.SaveChanges();

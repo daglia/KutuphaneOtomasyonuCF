@@ -23,9 +23,14 @@ namespace KutuphaneOtomasyonuCF
             InitializeComponent();
         }
 
+        private YazarViewModel _seciliYazar = new YazarViewModel();
+
         private void KitapEkleForm_Load(object sender, EventArgs e)
         {
             VerileriGetir();
+            //Context db = new Context();
+            //MessageBox.Show((cmbYazar.SelectedItem as YazarViewModel).YazarId.ToString());
+            //MessageBox.Show(db.Yazarlar.Where(x=>x.YazarId==4).ToList().Select(x => new Yazar() {YazarId=x.YazarId,YazarAd=x.YazarAd,YazarSoyad=x.YazarSoyad}).ToList().FirstOrDefault().YazarId.ToString());
         }
 
         private void VerileriGetir()
@@ -72,22 +77,20 @@ namespace KutuphaneOtomasyonuCF
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            Context db = new Context();
             try
             {
-                string[] YazarTam = cmbYazar.Text.Split(' ');
                 var kitapBusiness = new KitapBusiness();
                 var kitapModel = new KitapViewModel()
                 {
                     Ad = txtAd.Text,
-                    Yazar = new Yazar()
-                    {
-                        YazarAd = cmbYazar.Text.Remove(cmbYazar.Text.Length - YazarTam[YazarTam.Length-1].Length - 1),
-                        YazarSoyad = YazarTam[YazarTam.Length-1]
-                    },
-                    Stok = (short)nudStok.Value
+                    Yazar = db.Yazarlar.Find(_seciliYazar.YazarId),
+                    Stok = (short)nudStok.Value,
                 };
 
-                kitapBusiness.KitapEkle(kitapModel);
+                kitapModel.Yazar.Kitaplar.Add(db.Kitaplar.Find(kitapModel.Yazar.YazarId));
+
+                kitapBusiness.KitapEkle(kitapModel, db);
 
                 MessageBox.Show($"Yeni kitap eklendi: {kitapModel.Yazar.YazarAd} {kitapModel.Yazar.YazarSoyad} - {kitapModel.Ad}", "Yeni kitap eklendi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 VerileriGetir();
@@ -100,22 +103,13 @@ namespace KutuphaneOtomasyonuCF
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            string[] YazarTam = cmbYazar.Text.Split(' ');
             try
             {
                 Context db = new Context();
                 var seciliKitap = lbKitap.SelectedItem as KitapViewModel;
                 var kitap = db.Kitaplar.Find(seciliKitap.KitapId);
                 kitap.Ad = txtAd.Text;
-
-                if(cmbYazar.Text != (kitap.Yazar.YazarAd + " " + kitap.Yazar.YazarSoyad)){
-                    kitap.Yazar = new Yazar()
-                    {
-                        YazarAd = cmbYazar.Text.Remove(cmbYazar.Text.Length - YazarTam[YazarTam.Length - 1].Length - 1),
-                        YazarSoyad = YazarTam[YazarTam.Length - 1]
-                    };
-                }
-
+                kitap.Yazar = db.Yazarlar.Find(_seciliYazar.YazarId);
                 kitap.Stok = (short)nudStok.Value;
                 db.SaveChanges();
                 VerileriGetir();
@@ -166,8 +160,8 @@ namespace KutuphaneOtomasyonuCF
 
         private void cmbYazar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var yazarModel = cmbYazar.SelectedItem as YazarViewModel;
-            txtYazarId.Text = yazarModel.YazarId.ToString();
+            _seciliYazar = cmbYazar.SelectedItem as YazarViewModel;
+            txtYazarId.Text = _seciliYazar.YazarId.ToString();
         }
     }
 }

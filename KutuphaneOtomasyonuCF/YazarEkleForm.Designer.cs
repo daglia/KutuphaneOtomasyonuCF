@@ -44,76 +44,83 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 18);
+            this.label1.Location = new System.Drawing.Point(26, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 17);
+            this.label1.Size = new System.Drawing.Size(22, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Adı";
             // 
             // txtAd
             // 
-            this.txtAd.Location = new System.Drawing.Point(69, 15);
+            this.txtAd.Location = new System.Drawing.Point(52, 12);
+            this.txtAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAd.Name = "txtAd";
-            this.txtAd.Size = new System.Drawing.Size(207, 22);
+            this.txtAd.Size = new System.Drawing.Size(156, 20);
             this.txtAd.TabIndex = 1;
             // 
             // txtSoyad
             // 
-            this.txtSoyad.Location = new System.Drawing.Point(69, 43);
+            this.txtSoyad.Location = new System.Drawing.Point(52, 35);
+            this.txtSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(207, 22);
+            this.txtSoyad.Size = new System.Drawing.Size(156, 20);
             this.txtSoyad.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 43);
+            this.label2.Location = new System.Drawing.Point(9, 35);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 17);
+            this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Soyadı";
             // 
             // lbYazarlar
             // 
             this.lbYazarlar.FormattingEnabled = true;
-            this.lbYazarlar.ItemHeight = 16;
-            this.lbYazarlar.Location = new System.Drawing.Point(15, 135);
+            this.lbYazarlar.Location = new System.Drawing.Point(11, 110);
+            this.lbYazarlar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbYazarlar.Name = "lbYazarlar";
-            this.lbYazarlar.Size = new System.Drawing.Size(264, 180);
+            this.lbYazarlar.Size = new System.Drawing.Size(199, 147);
             this.lbYazarlar.TabIndex = 4;
             this.lbYazarlar.SelectedIndexChanged += new System.EventHandler(this.lbYazarlar_SelectedIndexChanged);
+            this.lbYazarlar.DoubleClick += new System.EventHandler(this.lbYazarlar_DoubleClick);
             // 
             // txtAra
             // 
-            this.txtAra.Location = new System.Drawing.Point(15, 321);
+            this.txtAra.Location = new System.Drawing.Point(11, 261);
+            this.txtAra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(264, 22);
+            this.txtAra.Size = new System.Drawing.Size(199, 20);
             this.txtAra.TabIndex = 5;
             this.txtAra.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAra_KeyUp);
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(69, 71);
+            this.txtId.Location = new System.Drawing.Point(52, 58);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(207, 22);
+            this.txtId.Size = new System.Drawing.Size(156, 20);
             this.txtId.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 71);
+            this.label3.Location = new System.Drawing.Point(32, 58);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 17);
+            this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "ID";
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(199, 100);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSil.Location = new System.Drawing.Point(149, 81);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(77, 28);
+            this.btnSil.Size = new System.Drawing.Size(58, 23);
             this.btnSil.TabIndex = 16;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
@@ -121,10 +128,9 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(107, 100);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Location = new System.Drawing.Point(80, 81);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(77, 28);
+            this.btnGuncelle.Size = new System.Drawing.Size(58, 23);
             this.btnGuncelle.TabIndex = 15;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
@@ -132,10 +138,9 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(15, 100);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEkle.Location = new System.Drawing.Point(11, 81);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(77, 28);
+            this.btnEkle.Size = new System.Drawing.Size(58, 23);
             this.btnEkle.TabIndex = 14;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
@@ -143,9 +148,9 @@
             // 
             // YazarEkleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 360);
+            this.ClientSize = new System.Drawing.Size(218, 292);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
@@ -157,6 +162,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAd);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "YazarEkleForm";
