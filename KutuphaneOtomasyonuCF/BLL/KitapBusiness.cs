@@ -26,6 +26,8 @@ namespace KutuphaneOtomasyonuCF.BLL
                     db.Kitaplar.Add(yeniKitap);
                     db.SaveChanges();
 
+                    kitap.Yazar.Kitaplar.Add(yeniKitap);
+
                     tran.Commit();
                 }
                 catch (Exception ex)

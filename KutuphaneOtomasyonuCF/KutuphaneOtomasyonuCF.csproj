@@ -103,6 +103,7 @@
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\KitapViewModel.cs" />
+    <Compile Include="ViewModels\OduncViewModel.cs" />
     <Compile Include="ViewModels\UyeViewModel.cs" />
     <Compile Include="ViewModels\YazarViewModel.cs" />
     <Compile Include="YazarEkleForm.cs">

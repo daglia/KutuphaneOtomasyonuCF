@@ -68,5 +68,13 @@ namespace KutuphaneOtomasyonuCF
                 }));
             clbKitaplar.DataSource = bulunanlar;
         }
+
+        private void btnOdunc_Click(object sender, EventArgs e)
+        {
+            var cevap = MessageBox.Show("Seçili kitaplar ödünç verilsin mi?", "Ödünç Verme",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cevap != DialogResult.Yes) return;
+
+        }
     }
 }
