@@ -14,7 +14,7 @@ namespace KutuphaneOtomasyonuCF.Entities
         [Key]
         public int KitapId { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         [Required]
         public string Ad { get; set; }
 

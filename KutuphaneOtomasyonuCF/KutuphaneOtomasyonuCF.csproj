@@ -70,13 +70,9 @@
     <Compile Include="Entities\Uye.cs" />
     <Compile Include="Entities\Yazar.cs" />
     <Compile Include="Helpers\EntityHelper.cs" />
-    <Compile Include="Migrations\201812281158278_a1.cs" />
-    <Compile Include="Migrations\201812281158278_a1.Designer.cs">
-      <DependentUpon>201812281158278_a1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812310513493_a11.cs" />
-    <Compile Include="Migrations\201812310513493_a11.Designer.cs">
-      <DependentUpon>201812310513493_a11.cs</DependentUpon>
+    <Compile Include="Migrations\201812311043401_a1.cs" />
+    <Compile Include="Migrations\201812311043401_a1.Designer.cs">
+      <DependentUpon>201812311043401_a1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MockData\MockData.cs" />
@@ -118,11 +114,8 @@
     <EmbeddedResource Include="KitapEkleForm.resx">
       <DependentUpon>KitapEkleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812281158278_a1.resx">
-      <DependentUpon>201812281158278_a1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812310513493_a11.resx">
-      <DependentUpon>201812310513493_a11.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812311043401_a1.resx">
+      <DependentUpon>201812311043401_a1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OduncForm.resx">
       <DependentUpon>OduncForm.cs</DependentUpon>

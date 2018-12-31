@@ -44,11 +44,15 @@ namespace KutuphaneOtomasyonuCF.MockData
             }
             for (int i = 0; i < 20; i++)
             {
-                Context.Kitaplar.Add(new Kitap()
+                Context db = new Context();
+                var kitapBusiness = new KitapBusiness();
+                var kitapModel = new KitapViewModel()
                 {
                     Ad = FakeData.TextData.GetSentence(),
+                    Yazar = db.Yazarlar.Find(i + 1),
                     Stok = (short)FakeData.NumberData.GetNumber(1, 10)
-                });
+                };
+                kitapBusiness.KitapEkle(kitapModel, db);
             }
         }
     }
