@@ -20,10 +20,10 @@ namespace KutuphaneOtomasyonuCF.BLL
                     var yeniOdunc = new Odunc()
                     {
                         OduncId = odunc.OduncId,
-                        UyeId = odunc.Uye.UyeId
+                        UyeId = odunc.Uye.UyeId,
                         Uye = odunc.Uye
                     };
-                    db.Uyeler.Add(yeniUye);
+                    db.Oduncler.Add(yeniOdunc);
                     db.SaveChanges();
 
                     tran.Commit();
